@@ -11,17 +11,20 @@ const validateStringContent = (input) => {
   return true;
 };
 
+const stringTrim = (string) => string.trim();
+
 const questions = [
   {
     type: "input",
     message: "What is the title of the development project?",
     validate: validateStringContent,
-    filter: (name) => name.trim(),
+    filter: stringTrim,
     name: "title",
   },
   {
     type: "editor",
     message: "Enter a project description",
+    filter: stringTrim,
     name: "description",
   },
   // {},
