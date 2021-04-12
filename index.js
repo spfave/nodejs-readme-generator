@@ -19,7 +19,11 @@ const questions = [
     filter: (name) => name.trim(),
     name: "title",
   },
-  // {},
+  {
+    type: "editor",
+    message: "Enter a project description",
+    name: "description",
+  },
   // {},
 ];
 
