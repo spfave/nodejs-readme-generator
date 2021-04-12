@@ -1,13 +1,13 @@
 {
-  "name": "static-site",
+  "name": "readme-generator",
   "version": "1.0.0",
-  "description": "",
+  "description": "Node.js console application to auto-generate a readme file (README.md) from user input.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Sebastian Fave",
+  "license": "MIT",
   "dependencies": {
     "inquirer": "^6.3.1"
   }
