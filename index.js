@@ -5,14 +5,9 @@ const inquirer = require("inquirer");
 const genMarkdown = require("./utils/generateMarkdown");
 
 // QUESTIONS and VALIDATION FUNCTIONS
-
 const validateStringContent = (input) => {
-  input = input.trim();
-
-  if (input === "") {
-    console.log("\nMust provide a development project title");
-    return false;
-  }
+  if (input.trim() === "")
+    return console.log("\nMust provide a development project title");
   return true;
 };
 
