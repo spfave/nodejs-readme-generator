@@ -4,8 +4,29 @@ const util = require("util");
 const inquirer = require("inquirer");
 const genMarkdown = require("./utils/generateMarkdown");
 
-// VARIABLES
-const questions = [];
+// QUESTIONS and VALIDATION FUNCTIONS
+
+const validateStringContent = (input) => {
+  input = input.trim();
+
+  if (input === "") {
+    console.log("\nMust provide a development project title");
+    return false;
+  }
+  return true;
+};
+
+const questions = [
+  {
+    type: "input",
+    message: "What is the title of the development project?",
+    validate: validateStringContent,
+    filter: (name) => name.trim(),
+    name: "title",
+  },
+  // {},
+  // {},
+];
 
 // FUNCTIONS
 const getDevProjData = () => inquirer.prompt(questions);
