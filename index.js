@@ -4,16 +4,20 @@ const util = require("util");
 const inquirer = require("inquirer");
 const genMarkdown = require("./utils/generateMarkdown");
 
-// TODO: Create an array of questions for user input
+// VARIABLES
 const questions = [];
 
-// TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
+// FUNCTIONS
+const getDevProjData = () => inquirer.prompt(questions);
 
-// TODO: Create a function to initialize app
-function init() {
-  console.log("test");
-}
+const writeFileAsync = util.promisify(fs.writeFile);
 
-// Function call to initialize app
+const init = () => {
+  getDevProjData()
+    .then((response) => writeFileAsync("README_test.md", genMarkdown(response)))
+    .then(() => console.log("README file created"))
+    .catch((err) => console.err(err));
+};
+
+// SCRIPT EXECUTION
 init();
