@@ -13,9 +13,9 @@ ${description}
   - [Table of Contents](#table-of-contents)
   - [Installation](#installation)
   - [Usage](#usage)
-  - [License](#license)
-  - [Contributing](#contributing)
   - [Tests](#tests)
+  - [Contributing](#contributing)
+  - [License](#license)
   - [Questions](#questions)
 
 ## Installation
@@ -28,14 +28,14 @@ npm install ${installation}
 ## Usage
 ${usage}
 
-## License
-Licensed under the ${license} license.
+## Tests
+${tests}
 
 ## Contributing
 ${contributing}
 
-## Tests
-${tests}
+## License
+Licensed under the ${license} license.
 
 ## Questions
 Reach out with questions on GitHub or via email 

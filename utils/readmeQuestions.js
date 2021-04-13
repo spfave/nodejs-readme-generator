@@ -42,10 +42,30 @@ const questions = [
     name: "usage",
   },
   {
+    type: "input",
+    message: "Provide data on tests used to validate application for release",
+    name: "tests",
+  },
+  {
+    type: "input",
+    message: "Provide development contributing instructions",
+    name: "contributing",
+  },
+  {
     type: "list",
     message: "Choose a software license for the application.",
     choices: Object.keys(osLicenses),
     name: "license",
+  },
+  {
+    type: "input",
+    message: "Provide your GitHub username for the README contact section.",
+    name: "gitHubUser",
+  },
+  {
+    type: "input",
+    message: "Provide a contact email for questions or concerns.",
+    name: "email",
   },
 ];
 
