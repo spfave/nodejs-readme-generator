@@ -83,6 +83,7 @@ const questions = [
   {
     type: "input",
     message: "Provide your GitHub username for the README contact section.",
+    validate: validateStringContent,
     name: "githubUser",
   },
   {
