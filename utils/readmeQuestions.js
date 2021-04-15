@@ -3,11 +3,31 @@ const osLicenses = require("./osLicenses");
 
 // VALIDATION FUNCTIONS
 const validateStringContent = (input) => {
-  if (input.trim() === "")
-    return console.log("\nMust provide a development project title");
+  if (input.trim() === "") return console.log("\nEntry can not be blank");
   return true;
 };
 
+/**
+ * Basis of validateEmail function taken from 'email-validator' package
+ * Modified to return string message instead of boolean false
+ */
+const validateEmail = (email) => {
+  const tester = /^[-!#$%&'*+\/0-9=?A-Z^_a-z{|}~](\.?[-!#$%&'*+\/0-9=?A-Z^_a-z`{|}~])*@[a-zA-Z0-9](-*\.?[a-zA-Z0-9])*\.[a-zA-Z](-?[a-zA-Z0-9])+$/;
+  const errMsg = () => console.log("\nEnter a valid email");
+
+  if (!email) return errMsg();
+  if (email.length > 254) return errMsg();
+  if (!tester.test(email)) return errMsg();
+
+  // Further checking of some things regex can't handle
+  const parts = email.split("@");
+  if (parts[0].length > 64) return errMsg();
+  if (parts[1].split(".").some((part) => part.length > 63)) return errMsg();
+
+  return true;
+};
+
+// FILTER FUNCTIONS
 const stringTrim = (string) => string.trim();
 
 // QUESTIONS ARRAY
@@ -21,7 +41,9 @@ const questions = [
   },
   {
     type: "input",
-    message: "Provide an application link if available.",
+    message:
+      "Provide an application link if available (otherwise accept default 'n/a').",
+    default: "n/a",
     name: "link",
   },
   {
@@ -64,7 +86,8 @@ const questions = [
   },
   {
     type: "input",
-    message: "Provide a contact email for questions or concerns.",
+    message: "Provide a contact email as an alternate means of contact.",
+    validate: validateEmail,
     name: "email",
   },
 ];
