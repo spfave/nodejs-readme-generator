@@ -14,7 +14,7 @@ const init = () => {
   getDevProjData()
     .then((response) => writeFileAsync("README_test.md", genMarkdown(response)))
     .then(() => console.log("README file created"))
-    .catch((err) => console.err(err));
+    .catch((err) => console.error(err));
 };
 
 // SCRIPT EXECUTION
