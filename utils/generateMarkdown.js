@@ -23,7 +23,7 @@ function renderLicenseSection(license) {
   if (license === "n/a") return "No license currently selected";
 
   const licenseData = osLicenses[license];
-  return `This application is licensed under the ${license.code} license.`;
+  return `This application is licensed under the ${licenseData.code} license.`;
 }
 
 // TODO: Create a function to generate markdown for README
