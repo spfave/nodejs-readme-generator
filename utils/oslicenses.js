@@ -1,4 +1,5 @@
 const osLicenses = {
+  "n/a": {},
   "Apache License 2.0": {
     code: "Apache 2.0",
     link: "https://opensource.org/licenses/Apache-2.0",
