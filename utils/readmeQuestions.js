@@ -9,6 +9,7 @@ const validateStringContent = (input) => {
 
 /**
  * Basis of validateEmail function taken from 'email-validator' package
+ * npm email-validator: https://www.npmjs.com/package/email-validator
  * Modified to return string message instead of boolean false
  */
 const validateEmail = (email) => {
