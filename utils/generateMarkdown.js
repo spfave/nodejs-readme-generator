@@ -12,9 +12,19 @@ function renderLicenseBadge(license) {
   return `[![License](https://img.shields.io/badge/License-${licenseBdgCode}-blue.svg)](${licenseData.link})`;
 }
 
-// TODO: Create a function that returns the license section of README
-// If there is no license, return an empty string
-function renderLicenseSection(license) {}
+// Create live application link
+function renderApplicationLink(link) {
+  if (link === "n/a") return "";
+  return `[Live Application](${link})`;
+}
+
+// Create license declaration section
+function renderLicenseSection(license) {
+  if (license === "n/a") return "No license currently selected";
+
+  const licenseData = osLicenses[license];
+  return `This application is licensed under the ${license.code} license.`;
+}
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
@@ -24,6 +34,38 @@ ${renderLicenseBadge(data.license)}
 
 ## Description
 ${data.description}
+
+${renderApplicationLink(data.link)}
+
+## Table of Contents
+- [Description](#description)
+- [Table of Contents](#table-of-contents)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Tests](#tests)
+- [Contributing](#contributing)
+- [License](#license)
+- [Questions](#questions)
+
+## Installation
+${data.installation}
+
+## Usage
+${data.usage}
+
+## Tests
+${data.tests}
+
+## Contributing
+${data.contributing}
+
+## License
+${renderLicenseSection(data.license)}
+
+## Contact/Questions
+Reach out with feedback (questions, ideas, or concerns) on GitHub or via email 
+- GitHub: [${data.githubUser}](https://github.com/${data.githubUser})
+- Email: ${data.email}
 
 `.trim();
 }
