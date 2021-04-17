@@ -12,7 +12,9 @@ const writeFileAsync = util.promisify(fs.writeFile);
 
 const init = () => {
   getApplicationReadmeData()
-    .then((response) => writeFileAsync("README_test.md", genMarkdown(response)))
+    .then((response) =>
+      writeFileAsync("README-application.md", genMarkdown(response))
+    )
     .then(() => console.log("README file created"))
     .catch((err) => console.error(err));
 };
