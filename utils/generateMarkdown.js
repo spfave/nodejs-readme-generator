@@ -63,7 +63,7 @@ ${data.contributing}
 ${renderLicenseSection(data.license)}
 
 ## Contact/Questions
-Reach out with feedback (questions, ideas, or concerns) on GitHub or via email 
+Reach out with feedback (questions, ideas, and/or concerns) on GitHub or via email 
 - GitHub: [${data.githubUser}](https://github.com/${data.githubUser})
 - Email: ${data.email}
 
