@@ -2,10 +2,10 @@
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 <!-- https://gist.github.com/lukas-h/2a5d00690736b4c3a7ba -->
 
-[Live Application](${link})
-
 ## Description
 ${description}
+
+[Live Application](${link})
 
 ## Table of Contents
 - [${title}](#title)
@@ -21,9 +21,9 @@ ${description}
 ## Installation
 ${installation}
 
-```bash
+<!-- ```bash
 npm install ${installation}
-```
+``` -->
 
 ## Usage
 ${usage}
@@ -38,7 +38,7 @@ ${contributing}
 Licensed under the ${license} license.
 
 ## Questions
-Reach out with questions on GitHub or via email 
+Reach out with feedback (questions, ideas, or concerns) on GitHub or via email 
 
-[${githubUser}](https://github.com/${githubUser}) \
-${email}
+GitHub: [${githubUser}](https://github.com/${githubUser}) \
+Email: ${email}
