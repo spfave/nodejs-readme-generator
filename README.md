@@ -11,8 +11,7 @@ The application is created with JavaScript and can be run using the Node.js runt
 
 &nbsp;
 ## **Video Demonstration**
-<!-- Demo interaction \
-![Demo weather dashboard](./assets/img/demoshot_weather_dashboard.png) -->
+![Watch on YouTube](https://www.youtube.com/watch?v=zJDC0mlLfmg)
 
 
 &nbsp;
